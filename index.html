@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GJ Banking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" style="background-color:rgb(2, 162, 255)">
+<style>
+
+    h1 {text-align: center;}
+    p {text-align: left;}
+    div {text-align: left;}
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Form {background-color: rgb(155, 184, 118);}
+#News {background-color: green;}
+#Contact {background-color: rgb(148, 182, 0);}
+#About {background-color: rgb(38, 95, 15);}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Form', this, 'red')">Form</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Form" class="tabcontent">
+  
+  <h1> GJ PIGGY BANK </h1>
+
+<p>We will keep your profile secret</p>
+
+    <from text-align: right; action="/action_page.php">
+        <fieldset>Fill up the form</fieldset>
+        <fieldset>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+      
+      
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+    
+      
+
+
+      <form action="/action_page.php">
+        <label for="phone">Enter a phone number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91-" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+
+    
+
+    
+        <per>Are you above 18 Age</per><br>
+          <input type="radio" id="YES" name="fav_language" value="YES">
+          <label for="YES">YES</label><br>
+          <input type="radio" id="NO" name="fav_language" value="NO">
+          <label for="css">NO</label><br>
+         
+         
+
+        <per>Till whgat time do you need the money?</per><br>
+        <input type="checkbox" id="Day1" name="Day1" value="18-07-2025">
+        <label for="Day1"> 1 month</label><br>
+        <input type="checkbox" id="Day2" name="Day2" value="19-07-2025">
+        <label for="Day2">2 years</label><br>
+        <input type="checkbox" id="Day3" name="Day3" value="19-07-2025">
+        <label for="Day3">6 years</label><br><br>
+    </fieldset>
+
+        </form>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    
+
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+  var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+}
+// <!--the web page-->
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
